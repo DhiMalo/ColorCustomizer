@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ColorCustomizer">
+<head>
+  <meta charset="UTF-8">
+  <!-- Scale to screen -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ColorCustomizer's Dream</title>
+  <!-- Anglar v1.4.7 (Minified) -->
+  <script src="angular.min.js"></script>
+  <!-- Angular v1.5.2 (Uncomment for access) -->
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script> -->
+  <!-- Bootsrap CDN Minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <!-- 
+  <link rel="stylesheet" href="bootstrap.min.css"> -->
+  <!-- Bootswatch Styling -->
+  <link rel="stylesheet" href="bootswatch.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="custom.css">
+  <!-- Color Palette Favicon  -->
+  <link rel="icon" href="paint-brush-and-palette.ico" type= "image/x-icon">
+  
+  <!-- Version 1: Embedded Angular -->
+  <script>
+  var ColorCustomizer = angular.module("ColorCustomizer", []);
+  ColorCustomizer.controller("ColorCustomizerController", function($scope){
+    return;
+  });
+  </script>
+</head>
+
+<body ng-controller="ColorCustomizerController as ColorCustomizer" style="background: {{color}};"> <!-- Consider changing the as ColorCustomizer to another noun. -->
+
+<div class="container">
+  <header>
+    <h1><a href="index.html">This is a landing page</a>
+      <p></p>
+    </h1>
+  </header>
+</div>
+
+    
+
+<div>
+
+<section id="colorInput">
+  <div class="well well-lg" style="background-color: rgba(255,255,255,0.6);">
+    <h1 class="text-center">ColorCustomizer</h1>
+    <h3 class="text-center">You Decide!</h3>
+
+    <p class="text-center"><input ng-model="color" type="text" placeholder="Enter a color here" ></p>
+  
+    <p class="text-center"><a href="#" class="btn btn-primary">Place order &rarr;</a></p>
+  </div>
+</section>
+
+<!-- Translucent Div with outset border -->
+    <div style="padding: 30px 140px 50px 140px; display: inline-block; background-color: rgba(255,255,255,0.6); position: absolute;
+    height: auto; width: 700px; border-style: outset; margin: 2cm 8cm 10cm 5cm;"></div>
+
+
+
+<div>
+
+<section id="options">
+    <!-- <hr> -->
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="media">
+          <a href="#" class="pull-left"><img src="http://lorempixel.com/64/64" alt="Image"></a>
+          <div class="media-body">
+            <h4 class="media-heading">Feature name</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, blanditiis?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="media">
+          <a href="#" class="pull-left"><img src="http://lorempixel.com/64/64" alt="Image"></a>
+          <div class="media-body">
+            <h4 class="media-heading">Feature name</h4>
+            <p>Amet, rerum, accusantium. Eius tempora expedita quo delectus, nisi molestias?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="media">
+          <a href="#" class="pull-left"><img src="http://lorempixel.com/64/64" alt="Image"></a>
+          <div class="media-body">
+            <h4 class="media-heading">Feature name</h4>
+            <p>Pariatur at eos ut, in obcaecati ipsam facilis magnam quia!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="media">
+          <a href="#" class="pull-left"><img src="http://lorempixel.com/64/64" alt="Image"></a>
+          <div class="media-body">
+            <h4 class="media-heading">Feature name</h4>
+            <p>Eveniet enim fuga officiis cumque aperiam excepturi nihil sapiente labore?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>  
+
+<!-- JQuery Min -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+<!-- Bootstrap CDN Minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
