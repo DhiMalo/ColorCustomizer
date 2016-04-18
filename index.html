@@ -30,14 +30,14 @@
     </script>
   </head>
 
-  <body ng-controller="ColorCustomizerController as ColorCustomizer" style="background: {{color}}"> 
+  <body ng-controller="ColorCustomizerController as ColorCustomizer" style="background: gray"> 
 
-    <div class="container">
+    <div class="container" style="background: {{color}}">
       <div>
         <section id="colorInput">
           <div class="well well-lg" style="background-color: rgba(255,255,255,0.6); margin-top: 20px;">
             <h1 class="text-center" style="margin-top:12px">ColorCustomizer</h1>
-            <h3 class="text-center" style="margin: 17px auto 14px auto">Paint your Background!</h3>
+            <h3 class="text-center" style="margin: 17px auto 14px auto">Paint your World!</h3>
             <div style="padding: 0cm 6.5cm 0cm 6.5cm" >
               <p class="text-center"><input ng-model="color" type="text" class="form-control" id="focusedInput" placeholder="Enter a color or code" style="color:{{color}};"></p>
             </div>
