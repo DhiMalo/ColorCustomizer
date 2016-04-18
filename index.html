@@ -1,121 +1,88 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="ColorCustomizer">
-<head>
-  <meta charset="UTF-8">
-  <!-- Scale to screen -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ColorCustomizer's Dream</title>
-  <!-- Anglar v1.4.7 (Minified) -->
-  <script src="angular.min.js"></script>
-  <!-- Angular v1.5.2 (Uncomment for access) -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script> -->
-  <!-- Bootsrap CDN Minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  <!-- 
-  <link rel="stylesheet" href="bootstrap.min.css"> -->
-  <!-- Bootswatch Styling -->
-  <link rel="stylesheet" href="bootswatch.css">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="custom.css">
-  <!-- Color Palette Favicon  -->
-  <link rel="icon" href="paint-brush-and-palette.ico" type= "image/x-icon">
-  
-  <!-- Version 1: Embedded Angular -->
-  <script>
-  var ColorCustomizer = angular.module("ColorCustomizer", []);
-  ColorCustomizer.controller("ColorCustomizerController", function($scope){
-    return;
-  });
-  </script>
-</head>
-
-<body ng-controller="ColorCustomizerController as ColorCustomizer" style="background: {{color}};"> <!-- Consider changing the as ColorCustomizer to another noun. -->
-
-<div class="container">
-  <header>
-    <h1><a href="index.html">This is a landing page</a>
-      <p></p>
-    </h1>
-  </header>
-</div>
-
+  <head>
+    <meta charset="UTF-8">
+    <!-- Scale to screen -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <title>ColorCustomizer</title>
+    
+    <!-- Load Anglar v1.4.7 Min -->
+    <script src="angular.min.js"></script>
+    
+    <!-- Load Bootsrap CDN Min - faster load time -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Local Bootstrap Min - slower load time -->
+    <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
+    
+    <!-- Load Custom CSS file - future refactor file -->
+    <link rel="stylesheet" href="custom.css">
+    
+    <!-- Add Favicon - Color Palette Image -->
+    <link rel="icon" href="paint-brush-and-palette.ico" type= "image/x-icon">
+    
+    <!-- Embedded Angular -->
+    <script>
+    var ColorCustomizer = angular.module("ColorCustomizer", []);
+    ColorCustomizer.controller("ColorCustomizerController", function($scope){
+      return;
+    });
+    </script>
+  </head>
 
-<div>
+  <body ng-controller="ColorCustomizerController as ColorCustomizer" style="background: {{color}}"> 
 
-<section id="colorInput">
-  <div class="well well-lg" style="background-color: rgba(255,255,255,0.6);">
-    <h1 class="text-center">ColorCustomizer</h1>
-    <h3 class="text-center">You Decide!</h3>
-
-    <p class="text-center"><input ng-model="color" type="text" placeholder="Enter a color here" ></p>
-  
-    <p class="text-center"><a href="#" class="btn btn-primary">Place order &rarr;</a></p>
-  </div>
-</section>
-
-<!-- Translucent Div with outset border -->
-    <div style="padding: 30px 140px 50px 140px; display: inline-block; background-color: rgba(255,255,255,0.6); position: absolute;
-    height: auto; width: 700px; border-style: outset; margin: 2cm 8cm 10cm 5cm;"></div>
-
-
-
-<div>
-
-<section id="options">
-    <!-- <hr> -->
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="media">
-          <a href="#" class="pull-left"><img src="http://lorempixel.com/64/64" alt="Image"></a>
-          <div class="media-body">
-            <h4 class="media-heading">Feature name</h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, blanditiis?</p>
+    <div class="container">
+      <div>
+        <section id="colorInput">
+          <div class="well well-lg" style="background-color: rgba(255,255,255,0.6); margin-top: 20px;">
+            <h1 class="text-center" style="margin-top:12px">ColorCustomizer</h1>
+            <h3 class="text-center" style="margin: 17px auto 14px auto">Paint your Background!</h3>
+            <div style="padding: 0cm 6.5cm 0cm 6.5cm" >
+              <p class="text-center"><input ng-model="color" type="text" class="form-control" id="focusedInput" placeholder="Enter a color or code" style="color:{{color}};"></p>
+            </div>
           </div>
-        </div>
+        </section>
+
+        <!-- Master Painter Quotes on Color -->
+        <div style="color:{{color}};">
+
+          <!-- Quote 1 -->
+          <div class="well well-sm">
+            <blockquote>
+              <p> One can speak poetry just by arranging colors well... </p>
+              <small>Vincent Van Gogh </small>
+            </blockquote>
+          </div>
+          <!-- Quote 2 -->
+          <div class="well well-sm">
+            <blockquote>
+              <p> I try to apply colors like words that shape poems, like notes that shape music. </p>
+              <small>Joan Miro</small>
+            </blockquote>
+          </div>
+          <!-- Quote 3 -->
+          <div class="well well-sm">
+            <blockquote>
+              <p>Color is the keyboard...</p><p>The artist is the hand that plays, to cause vibrations in the soul.</p>
+              <small>Wassily Kandinsky</small>
+            </blockquote>
+          </div>
+          <!-- Image Well -->
+          <div class="well well-lg" style="background-image: url(oils.png)">
+          </div>
+
+        </div>  
+
       </div>
     </div>
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="media">
-          <a href="#" class="pull-left"><img src="http://lorempixel.com/64/64" alt="Image"></a>
-          <div class="media-body">
-            <h4 class="media-heading">Feature name</h4>
-            <p>Amet, rerum, accusantium. Eius tempora expedita quo delectus, nisi molestias?</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="media">
-          <a href="#" class="pull-left"><img src="http://lorempixel.com/64/64" alt="Image"></a>
-          <div class="media-body">
-            <h4 class="media-heading">Feature name</h4>
-            <p>Pariatur at eos ut, in obcaecati ipsam facilis magnam quia!</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="media">
-          <a href="#" class="pull-left"><img src="http://lorempixel.com/64/64" alt="Image"></a>
-          <div class="media-body">
-            <h4 class="media-heading">Feature name</h4>
-            <p>Eveniet enim fuga officiis cumque aperiam excepturi nihil sapiente labore?</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>  
 
-<!-- JQuery Min -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
-<!-- Bootstrap CDN Minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <footer>
+      <p class="text-center"><a href="mailto:aherisan@gmail.com?Subject=Hi %20Aheri!" target="_top">e-mail Aheri Stanford-Asiyo</a></p>
+    </footer>
 
-</body>
+  </body>
+
 </html>
 
 
